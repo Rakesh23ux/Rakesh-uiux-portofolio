@@ -21,6 +21,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -211,7 +213,8 @@
                 </div>
                 <div class="timeline-item">
                   <div class="year">2019-2023</div>
-                  <div class="description">Graduated In Mechanical Engineering From  [ M.V.G.R COLLEGE OF ENGINEERING ]</div>
+                  <div class="description">Graduated In Mechanical Engineering From [ M.V.G.R COLLEGE OF ENGINEERING ]
+                  </div>
                 </div>
               </div>
 
@@ -456,127 +459,195 @@
     <!-- Services Section -->
     <section id="services" class="services section">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <style>
+        #services {
+          padding: 80px 0;
+          background-color: #ffffff;
+          text-align: center;
+        }
 
-        <div class="row g-4">
+        #services h2 {
+          font-size: 30px;
+          color: #212529;
+          margin-bottom: 20px;
+          animation: fadeInDown 1s ease;
+        }
 
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-stack"></i>
-              </div>
-              <h3>Digital Solutions</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam
-                rem aperiam eaque ipsa.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+        #services p {
+          color: #6c757d;
+          max-width: 700px;
+          margin: 0 auto 50px;
+          animation: fadeIn 1.2s ease;
+        }
 
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h3>Secure Systems</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                excepteur sint occaecat cupidatat.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
 
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <h3>Growth Strategy</h3>
-              <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur
-                vel illum qui dolorem.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+        .services-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          max-width: 1200px;
+          margin: auto;
+        }
 
-          <!-- Card 4 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-cpu"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-                dolores eos qui ratione.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+        .service-card {
+          background-color: #f8f9fa;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.4s ease;
+          text-align: center;
+          transform: translateY(20px);
+          opacity: 0;
+          animation: fadeUp 0.8s forwards;
+        }
 
-          <!-- Card 5 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-cloud-arrow-up"></i>
-              </div>
-              <h3>Cloud Services</h3>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                deleniti atque corrupti quos.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+        /* Sequential animation delay for cards */
+        .service-card:nth-child(1) {
+          animation-delay: 0.2s;
+        }
 
-          <!-- Card 6 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon">
-                <i class="bi bi-gear"></i>
-              </div>
-              <h3>Process Automation</h3>
-              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus.</p>
-              <div class="card-links">
-                <a href="#" class="link-item">
-                  Learn More
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+        .service-card:nth-child(2) {
+          animation-delay: 0.4s;
+        }
 
+        .service-card:nth-child(3) {
+          animation-delay: 0.6s;
+        }
+
+        .service-card:nth-child(4) {
+          animation-delay: 0.8s;
+        }
+
+        .service-card i {
+          font-size: 38px;
+          color: #007bff;
+          margin-bottom: 15px;
+          transition: all 0.4s ease;
+        }
+
+        .service-card h4 {
+          color: #007bff;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .service-card p {
+          color: #495057;
+          font-size: 14px;
+        }
+
+        /* Hover Effects */
+        .service-card:hover {
+          transform: translateY(-10px) scale(1.03);
+          box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+          background: #ffffff;
+        }
+
+        .service-card:hover i {
+          color: #0056b3;
+          transform: scale(1.2) rotate(8deg);
+          text-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+      <section id="services">
+        <h2 style="color:#0056b3;">My Services</h2>
+        <p>I specialize in designing user-friendly digital products and developing modern web interfaces that help
+          businesses grow.</p>
+
+        <div class="services-container">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h4>UI/UX Design</h4>
+            <p>Creating clean, intuitive, and engaging designs that align with business goals and user needs.</p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h4>Web Development</h4>
+            <p>Building responsive and scalable websites using modern front-end frameworks like React and Bootstrap.</p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h4>Prototyping</h4>
+            <p>Creating interactive prototypes to visualize user flow and test ideas before development.</p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h4>Brand Identity</h4>
+            <p>Designing cohesive brand systems that communicate your story through colors, typography, and visuals.</p>
+          </div>
         </div>
+      </section>
 
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
 
     </section><!-- /Services Section -->
 
@@ -601,12 +672,6 @@
             </li>
             <li data-filter=".filter-development">
               Development
-            </li>
-            <li data-filter=".filter-photography">
-              Photography
-            </li>
-            <li data-filter=".filter-marketing">
-              Marketing
             </li>
           </ul>
 
@@ -830,7 +895,7 @@
                 <div class="content">
                   <h4>My Location</h4>
                   <p>Vizianagaram</p>
-                  <p> MG ROAD.  535002</p>
+                  <p> MG ROAD. 535002</p>
                 </div>
               </div>
 
